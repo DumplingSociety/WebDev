@@ -1,0 +1,116 @@
+/* CSS files add styling rules to your content */
+* {
+  box-sizing: border-box;
+}
+
+
+.header {
+    margin-bottom:0;
+    height:10%;
+    width:100%;
+    background-color:#343430;
+}
+
+
+.box{
+    width: 100%;
+    text-align:center;
+}
+
+
+#searchBarWrap{ 
+         display: flex;
+         justify-content: center;
+    }
+
+#myInput {
+  background-image: url('https://cdn.glitch.com/e188e710-2453-4f7d-abf9-bfc1216fd437%2Fsearch-3-64.png?1548957875829');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 60%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+
+  margin-bottom: 12px;
+  border:#FFD700 solid;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+
+.search_bar input[type="text"] {
+    position:absolute;
+    left:30%;
+    top:25%;
+    width:30%;
+    background-color:black;
+    color:black;
+}
+
+html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; 
+    color: black;
+}
+
+/* #CSS Reset & Basic
+================================================== 
+html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block; }
+html {background-color: #FFF;}
+body {
+	line-height: 1; }
+ol, ul {
+	list-style: disc; margin-left: 20px;}
+blockquote, q {
+	quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none; }
+table {
+	border-collapse: collapse;
+	border-spacing: 0; }
+strong {
+	font-weight: bold; }
+.alignright {float: right; margin-left: 10px; margin-bottom: 10px;}
+.alignleft {float: left; margin-right: 10px; margin-bottom: 10px;}
+
+p {margin-bottom: 10px;}
+
+.column-full-width {clear:both;display:block;}
+
+hr {margin:15px 0;}
+
+*/

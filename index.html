@@ -7,16 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="script.js"></script> 
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+   var faq = [];
+
+   $.getJSON('https://raw.githubusercontent.com/DumplingSociety/WebDev/master/faq.json', function(data) {
+       $.each(data.questions, function(i, f) 
+                		{
+         
+          var tblRow = "<li>" + "<a >" + f.freAqeustions + "</a>" + "</li>"
+           $(tblRow).appendTo("body");       
+         console.log(tblRow);
+
+     });
+   });
+});
+</script>
 </head>
-
-<div class="w3-container w3-brown">
-  <p></p>
-</div>
-
+  
+  
+  
 <body style="font-family:Verdana;color:#aaaaaa;">
 
-  <script src="script.js">
-  </script>
 
   <div style="background-color:#e5e5e5;padding:15px;text-align:center;">
     <img class="center" src="https://cdn.glitch.com/e188e710-2453-4f7d-abf9-bfc1216fd437%2FUSF_JolietIL_arch.png?1548640267652"
@@ -25,123 +40,17 @@
 
   <div style="overflow:auto">
     <p>&nbsp;</p>
-    <div id="searchBarWrap">
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search here..." title="Type in a name">
-    </div>
-
-
     <h3 align="left"><a id="Top" name="Top"></a><strong>Click on the links below to see an answer to the questions.</strong></h3>
+    
+    <ul id="userdata">
+      <tbody>
 
-    <ul id="myUL">
-      <li><a href="#1">1. How do I contact the Student Accounts&nbsp;Office?</a></li>
-      <li><a href="#2">2. What is the mailing address for the Student Accounts&nbsp;Office?</a></li>
-      <li><a href="#4">3. What types of payments do you accept?</a></li>
-      <li><a href="#5">4. Who do I make my check payment out to?</a></li>
-      <li><a href="#6">5. How can I pay my bill?</a></li>
-      <li><a href="#7">6. When is my payment due?</a></li>
-      <li><a href="#8">7. Do you offer any options for payment plans?</a></li>
+       </tbody>
+<li><a > ffgfg </a></li>
     </ul>
+    
   </div>
 
-
-  <blockquote>
-    <p align="left"><a id="1" name="1"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer 1</strong></p>
-    <p align="left">Phone Numbers: 815-740-3688 or 800-729-2700</p>
-    <p align="left">Office Hours: Monday-Friday, 8 a.m.-4:30 p.m. CST</p>
-    <p align="left">Office Location: St. Clare Campus, 1550 Plainfield Rd., Joliet</p>
-    <p align="left"><a href="#Top">Return to TOP</a></p>
-    <p><a id="2" name="2"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer 2</strong></p>
-    <p align="left">University of St. Francis</p>
-    <p>Student Accounts Office</p>
-    <p>500 Wilcox Street</p>
-    <p>Joliet, IL 60435</p>
-    <p align="left"><a href="#Top">Return to TOP</a></p>
-    <p><a id="4" name="4"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer&nbsp;3</strong></p>
-    <p>Cash, Check, Money Order, ACH from checking or savings accounts, Visa, American Express, MasterCard and Discover</p>
-    <p align="left"><a href="#Top">Return to TOP</a></p>
-    <p><a id="5" name="5"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer&nbsp;4</strong></p>
-    <p>University of St. Francis</p>
-    <p align="left"><a href="#Top">Return to TOP</a></p>
-    <p><a id="6" name="6"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer&nbsp;5</strong></p>
-    <p>By logging onto your MyUSF Portal. Click on For Students, then Tuition Bill/Account Summary, followed by the
-      Make a Secure Online Tuition Payment online link.</p>
-    <p>By mail with a check or money order</p>
-    <p align="left"><a href="#Top">Return to TOP</a></p>
-    <p><a id="7" name="7"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer&nbsp;6</strong></p>
-    <p>An email schedule with the due dates for each program is available on our website at <a href="https://www.stfrancis.edu/about/student-accounts/email-schedule-for-usf-tuition-statements/"
-        target="_blank">stfrancis.edu/about/student-accounts/email-schedule for-usf-tuition-statements</a></p>
-    <p align="left"><a href="#Top">Return to TOP</a></p>
-    <p><a id="8" name="8"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer&nbsp;7</strong></p>
-    <p>Payment plans are offered each semester. If this is the chosen option to pay your tuition, you must enroll
-      electronically each semester. This option is available by logging in to your <a href="http://myusf.stfrancis.edu"
-        target="_blank">MyUSF Portal</a>, clicking For Students, then Tuition Bill/Account Summary, and finally the
-      Electronic Deferment/Payment Plan Enrollment. During the enrollment process you are able to make your first
-      payment with one of four accepted credit cards, or you may choose to mail a check. The cost of the payment plan
-      varies by the program. For our traditional undergraduate students, you may enroll in the 5 payment plan per
-      semester for a cost of $90. For our adult undergraduate and graduate students, you may enroll in the 4 payment
-      plan per semester for a cost of $40.</p>
-    <p>Accounts that are not paid in full or enrolled in a payment plan by the second published due date of each
-      semester will be assessed a $120 late payment fee, and placed on a business hold. A business hold will prevent
-      future registrations, as well as the release of transcripts or diplomas.</p>
-    <p>&nbsp;</p>
-    <p><a href="#Top">Return to TOP</a></p>
-    <p><a id="9" name="9"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer&nbsp;8</strong></p>
-    <p>Students whose employer will reimburse the cost of tuition upon completion of courses may enroll in the
-      deferment plan. The deferment plan is only available if your employer will be paying for the tuition. If this is
-      the chosen option to pay your tuition, you must enroll electronically each semester. This option is available by
-      logging in to your <a href="http://myusf.stfrancis.edu" target="_blank">MyUSF Portal</a>, clicking For Students,
-      then Tuition Bill/Account Summary, and finally the Electronic Deferment/Payment Plan Enrollment option on the
-      right side of your screen. During the enrollment process you are able to pay the associated fee to defer your
-      balance with one of three accepted credit cards, or you may choose to mail a check. The cost of the deferment
-      plan varies by the program. For our traditional undergraduate students, you may defer your balance for a cost of
-      $90 per semester. For our adult undergraduate and graduate students, you may defer your balance for a cost of $40
-      per semester. Students who enroll in the deferment plan have six weeks upon completion of the semester to pay
-      their balance. In the event an employer does not reimburse for tuition, it is the students’ responsibility to
-      make sure all balances are paid in full.</p>
-    <p>Accounts that are not paid in full or enrolled in the deferment plan by the second published due date of each
-      semester will be assessed a $120 late payment fee, and placed on a business hold. A business hold will prevent
-      future registrations, as well as the release of transcripts or diplomas.</p>
-    <p align="left"><a href="#Top">Return to TOP</a></p>
-    <p><a id="10" name="10"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer&nbsp;9</strong></p>
-    <p align="left">Tuition statements are generated electronically and you will continue to receive a statement until
-      the balance is paid in full.</p>
-    <p align="left"><a href="#Top">Return to TOP</a></p>
-    <p><a id="11" name="11"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer 10</strong></p>
-    <p>Tuition statements are sent via email to a student’s university email account approximately two weeks before the
-      published due date. Email dates along with due dates are included at <a href="https://www.stfrancis.edu/about/student-accounts/email-schedule-for-usf-tuition-statements/"
-        target="_blank">stfrancis.edu/about/student-accounts/email-schedule-for-usf-tuition-statements/</a>. Students
-      will continue to receive a monthly tuition statement until the balance is paid in full.</p>
-    <p><a href="#Top">Return to TOP</a><br>
-      <a id="12" name="12"></a></p>
-    <p>&nbsp;</p>
-    <p align="left"><strong>Answer 11</strong></p>
-    <p>Failure to receive your tuition statement does not relieve you of your obligation to pay. Please contact
-      the&nbsp;Student Accounts&nbsp;Office if you do not receive your tuition statement or log into your MyUSF Portal
-      to view your statement.</p>
-    <p>&nbsp;</p>
-    <p><a href="#Top">Return to TOP</a></p>
-
-  </blockquote>
   <div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright </div>
 
 </body>

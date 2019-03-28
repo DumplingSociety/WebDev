@@ -1,36 +1,36 @@
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
 <title>USF FAQ</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Latest compiled and minified CSS -->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="main.css">
-<!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(function() {
-	var jsonSource = 'https://s3.amazonaws.com/usffaq/CleanSampleFile.json';
+	var div = document.getElementById('responses');
+	//var jsonSource = 'https://raw.githubusercontent.com/Kikaromi/USFFAQ/master/SampleFile.json'; 
+	//var jsonSource = 'https://s3.amazonaws.com/usffaq/SampleFile.json'; This was the old call with the goofy answers
+	var jsonSource = 'https://s3.amazonaws.com/usffaq/CleanSampleFile.json'; //This is the real version
    $.getJSON(jsonSource) 
-   
-    
   .done (function(data) {	
-		var div = document.getElementById('responses');
 		$.each(data.questions, function(i, f) {
 			div.innerHTML = div.innerHTML + '<div id="QA'+i.substring(0,i.length-1)+'"><div class="q-frame" data-toggle="collapse" data-target="#FRAME'+i.substring(0,i.length-1)+'">'+f+'</div>';
 		});
 		$.each(data.answers, function(i, f) {
 			var element=document.getElementById('QA'+i.substring(0,i.length-1));
-			element.innerHTML=element.innerHTML+'<div id="FRAME'+i.substring(0,i.length-1)+'" class="collapse a-frame">'+f+'</div></div>';
+			if (element){
+				element.innerHTML=element.innerHTML+'<div id="FRAME'+i.substring(0,i.length-1)+'" class="collapse a-frame">'+f+'</div></div>';
+			}
 		});
 	
 	}) //end done statement
 	
 	.fail(function(data){
-	alert("Something Goofed.");
+	div.innerHTML = div.innerHTML + '<div class="q-frame" id="errorMsg">'+'Error reading the file! <br> Use the Feedback Page to report this bug!'+'</div>';
 	})  // end fail statement
 	
 	});
@@ -48,12 +48,12 @@ $(function() {
 
 <br/>
 
-<div class="nav">
-<button class="navbox colorBackgroundDark_GrayDarker" onclick="javascript:window.location='index.html'"><a>FAQ</a></button>
-<button class="navbox colorBackgroundDark_GrayDarker" onclick="javascript:window.location='feedback.html'"><a>Feedback</a></button>
+<div class="nav center">
+<button class="navbox colorBackgroundDark_GrayDarker" onclick="javascript:window.location='index.html'"><a style="color:white">FAQ</a></button>
+<button class="navbox colorBackgroundDark_GrayDarker" onclick="javascript:window.location='feedback.html'"><a style="color:white">Feedback</a></button>
 </div>
 
-<div id="responses" style="clear:left">
+<div id="responses">
 
 
 
